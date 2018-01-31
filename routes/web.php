@@ -24,7 +24,7 @@ Route::get('/shirt', 'FrontController@shirt')->name('shirt');
 Route::resource('/cart', 'CartController');
 Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
   Route::get('/', function()
   {
     return view('admin.index');
