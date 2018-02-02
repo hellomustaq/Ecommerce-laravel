@@ -9,10 +9,11 @@ class CheckoutController extends Controller
 {
     //
     public function step1(){
-      if (Auth::check()) {
-        return view('front.shipping-info');
-      }
-      return redirect()->route('login');
+      // if (Auth::check()) {
+      //   return view('front.shipping-info');
+      // }
+      // return redirect()->route('login');
+      return view('front.shipping-info');
     }
 
 }

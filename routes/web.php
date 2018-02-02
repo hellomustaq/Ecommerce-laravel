@@ -23,7 +23,9 @@ Route::get('/shirts', 'FrontController@shirts')->name('shirts');
 Route::get('/shirt', 'FrontController@shirt')->name('shirt');
 Route::resource('/cart', 'CartController');
 Route::resource('/address', 'AddressController');
-Route::get('/checkout', 'CheckoutController@step1')->name('checkout');
+Route::group(['middleware'=>'auth'],function(){
+  Route::get('/checkout', 'CheckoutController@step1')->name('checkout');
+});
 
 
 Route::get('/logout', 'Auth\LoginController@logout');
