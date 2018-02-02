@@ -1,9 +1,7 @@
 @if ($errors->any())
     <div class="alert alert-danger">
-        <ul>
             @foreach ($errors->all() as $error)
-                <div class="row">{{ $error }}</div>
+                  <h6 style="text-align: center;">{{ $error }}</h6>
             @endforeach
-        </ul>
     </div>
 @endif

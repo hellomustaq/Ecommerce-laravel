@@ -163,7 +163,7 @@ a:hover{
                 </div>
                 </div>
                 <a class="action-back"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Continue Shopping</a>
-                <a class="action-checkout pull-right" role="button">Check Out <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="{{route('checkout')}}" class="action-checkout pull-right" role="button">Check Out <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </div>
       @else

@@ -22,6 +22,10 @@ Route::get('/', 'FrontController@index')->name('home');
 Route::get('/shirts', 'FrontController@shirts')->name('shirts');
 Route::get('/shirt', 'FrontController@shirt')->name('shirt');
 Route::resource('/cart', 'CartController');
+Route::resource('/address', 'AddressController');
+Route::get('/checkout', 'CheckoutController@step1')->name('checkout');
+
+
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
