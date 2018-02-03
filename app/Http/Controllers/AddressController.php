@@ -51,6 +51,7 @@ class AddressController extends Controller
           'phone.required'=>'Please fill up Phone field',
         ]);
         Auth::user()->address()->create($request->all());
+        return redirect()->route('payment');
     }
 
     /**

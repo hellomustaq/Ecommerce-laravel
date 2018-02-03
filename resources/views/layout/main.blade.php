@@ -80,5 +80,21 @@
 
     <script src="{{asset('dist/js/vendor/jquery.js')}}"></script>
     <script src="{{asset('dist/js/app.js')}}"></script>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+        
+      </script>
+
+
+
+    {{-- script for payment (stripe)  --}}
+    <script src="https://js.stripe.com/v2/"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+
+
+
     </body>
 </html>
