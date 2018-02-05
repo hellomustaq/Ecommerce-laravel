@@ -4,20 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use App\AddressController;
 
 class CheckoutController extends Controller
 {
-    //
     public function step1(){
       // if (Auth::check()) {
       //   return view('front.shipping-info');
       // }
       // return redirect()->route('login');
+      if (Cart::count()<1) {
+        return redirect()->back();
+      }
+
       return view('front.shipping-info');
     }
 
 
     public function payment(){
+      //dd('$isShippingdone');
+      if (Cart::count()<1 or session()->get('isShippingdone')!==1) {
+        return redirect()->back();
+      }
       return view('front.payment');
     }
 
@@ -33,7 +42,7 @@ class CheckoutController extends Controller
 
       // Charge the user's card:
       $charge = \Stripe\Charge::create(array(
-        "amount" => 99999999999,
+        "amount" => Cart::total()*100,
         "currency" => "usd",
         "description" => "Example charge",
         "source" => $token,
