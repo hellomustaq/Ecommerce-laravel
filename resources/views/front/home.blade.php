@@ -21,7 +21,7 @@
   <br/>
   <div class="subheader text-center">
        <h2>
-      MyKey&rsquo;s Latest Shirts
+      Mustaq&rsquo;s Latest Shirts
   </h2>
   </div>
 

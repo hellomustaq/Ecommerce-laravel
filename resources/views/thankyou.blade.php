@@ -15,7 +15,7 @@
         <hr>
 
         <p class="lead">
-          <a class="btn btn-primary btn-sm" href="{{route('/')}}" role="button">Continue to homepage</a>
+          <a class="btn btn-primary btn-sm" href="{{route('home')}}" role="button">Continue to homepage</a>
         </p>
       </div>
       <div class="col-md-3">
