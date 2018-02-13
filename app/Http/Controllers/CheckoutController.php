@@ -48,6 +48,22 @@ class CheckoutController extends Controller
         "source" => $token,
       ));
 
+      //create order
+
+      $user=Auth::user();
+      $order=$user->orders()->create([
+        'total'=>Cart::total(),
+        'delivered'=>0
+      ]);
+
+      $cartItems=Cart::content();
+      foreach ($cartItems as $cartItem) {
+        $order->orderItems()->attach($cartItem->id,[
+          'qty'=>$cartItem->qty,
+          'total'=>$cartItem->qty*$cartItem->price
+        ]);
+      }
+
     }
 
 }
