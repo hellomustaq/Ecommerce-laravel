@@ -63,6 +63,7 @@ class CheckoutController extends Controller
           'total'=>$cartItem->qty*$cartItem->price
         ]);
       }
+      return view('thankyou');
 
     }
 
