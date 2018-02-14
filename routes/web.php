@@ -40,4 +40,5 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
   })->name('admin.index');
   Route::resource('product','ProductsController');
   Route::resource('category','CategoryController');
+  Route::get('order/{type?}','OrderController@orders');
 });
