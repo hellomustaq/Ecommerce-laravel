@@ -26,6 +26,18 @@
                     <li><a href="{{route('category.index')}}">Category</a></li>
                 </ul>
             </li>
+            <li class="submenu">
+                <a href="#">
+                    <i class="glyphicon glyphicon-list"></i> Order
+                    <span class="caret pull-right"></span>
+                </a>
+                <!-- Sub menu -->
+                <ul>
+                    <li><a href="{{ url('admin/order') }}">All order</a></li>
+                    <li><a href="{{ url('admin/order/pending') }}">Pending order</a></li>
+                    <li><a href="{{ url('admin/order/delivered') }}">Delivered order</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div> <!-- ADMIN SIDE NAV-->

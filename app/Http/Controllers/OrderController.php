@@ -17,4 +17,13 @@ class OrderController extends Controller
       }
       return view('admin.orders')->with('orders', $order);
     }
+
+
+
+    public function delivered(Request $request,$orderId){
+      $order=Order::find($orderId);
+      $order->delivered=$request->delivered;
+      $order->save();
+      return back();
+    }
 }
