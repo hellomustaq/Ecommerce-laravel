@@ -38,7 +38,7 @@
           <tr>
             <th style="text-align: center;">Product Name</th>
             <th style="text-align: center;">Product Qty</th>
-            <th style="text-align: center;">Product Price</th>
+            <th style="text-align: center;">Product Price <small>(without vat)</small></th>
           </tr>
         </thead>
         <tbody>
