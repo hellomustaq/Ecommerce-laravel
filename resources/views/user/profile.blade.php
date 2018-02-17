@@ -2,6 +2,17 @@
 @section('link')
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
 @endsection
+@section('style')
+	<style type="text/css">
+		td{
+			background-color: lightgray;
+		}
+		th{
+			background-color: gray;
+		}
+
+	</style>
+@endsection
 @section('content')
 	<div class="container">
 		<div class="col-md-2"></div>
@@ -44,12 +55,14 @@
     	@if ($user->orders)
     	@foreach ($orders as $order)
     		<div class="" style="width: 100%;">
-	    		<div class="col-md-1"></div>
+	    		<div class="col-md-1">
+	    			
+	    		</div>
 	    		<div class="col-md-10">
-	    			<table class="table table-hover">
+	    			<table class="table table-hover table-bordered">
 	    				<thead>
 	    					<tr>
-	    						<th>order id</th>
+	    						<th>order Name</th>
 	    						<th>Qty</th>
 	    						<th>total</th>
 	    					</tr>
@@ -66,8 +79,11 @@
 	    				</tbody>
 	    			</table>
 	    		</div>
-	    		<div class="col-md-1"></div>
+	    		<div class="col-md-1">
+	    			
+	    		</div>
 	    	</div>
+	    	<div class="clearfix"></div>
     	
     	@endforeach
     		
