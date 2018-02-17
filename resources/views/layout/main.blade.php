@@ -9,9 +9,20 @@
         </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="{{asset('dist/css/foundation.css')}}"/>
+        {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/> --}}
         {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"/> --}}
         <link rel="stylesheet" href="{{asset('dist/css/app.css')}}"/>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+        <style type="text/css">
+            .btton{
+                border-radius: 5px;
+                padding: 7px 5px;
+                margin: 5px;
+            }
+            .padd{
+                padding:0;
+            }
+        </style>
         @yield('link')
         @yield('style')
 
@@ -50,6 +61,16 @@
                             </span>
                         </a>
                     </li>
+                    
+                        @if (Auth::check())
+                            <li><a class="padd" href="{{ url('/home') }}"><span class="button btton">Profile</span></a></li>
+                            <li><a class="padd" href="{{ route('logout') }}"><span class="button btton">Logout</span></a></li>
+                        @else
+                            <li><a class="padd" href="{{ route('login') }}"><span class="button btton">Login</span></a></li>
+                            <li><a class="padd" href="{{ route('register') }}"><span class="button btton">Signup</span></a></li>
+                        @endif
+
+                    
                 </ol>
             </div>
         </div>
