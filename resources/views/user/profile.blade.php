@@ -64,7 +64,7 @@
 	    					<tr>
 	    						<th>order Name</th>
 	    						<th>Qty</th>
-	    						<th>total</th>
+	    						<th>Product Price</th>
 	    					</tr>
 	    				</thead>
 	    				<tbody>
