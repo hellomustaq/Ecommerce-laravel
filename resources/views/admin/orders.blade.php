@@ -11,6 +11,14 @@
   .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: #ede9e9;
 }
+  tbody>tr>td{
+    background-color: #9fcfcf;
+    }
+
+    .subhead>th{
+      background-color: #9fcfcf;
+    }
+
   </style>
 
 @endsection
@@ -35,7 +43,7 @@
           </tr>
         </thead>
         <thead>
-          <tr>
+          <tr class="subhead">
             <th style="text-align: center;">Product Name</th>
             <th style="text-align: center;">Product Qty</th>
             <th style="text-align: center;">Product Price <small>(without vat)</small></th>
