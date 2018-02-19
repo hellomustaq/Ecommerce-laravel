@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'FrontController@index')->name('home');
 Route::get('/shirts', 'FrontController@shirts')->name('shirts');
-Route::get('/shirt', 'FrontController@shirt')->name('shirt');
+Route::get('/shirt/{id}', 'FrontController@shirt')->name('shirt');
 Route::resource('/cart', 'CartController');
 Route::resource('/address', 'AddressController');
 

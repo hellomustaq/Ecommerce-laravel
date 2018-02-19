@@ -37,7 +37,7 @@
                       <img src="images/{{$product->image}}"/>
                   </a>
               </div>
-              <a href="{{route('shirt')}}">
+              <a href="{{route('shirt',$product->id)}}">
                   <h3>
                       {{$product->name}}
                   </h3>
