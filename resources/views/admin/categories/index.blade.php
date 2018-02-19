@@ -7,7 +7,7 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       @forelse ($categories as $category)
-        <li class="btn-success navbar-btn "><a href="{{route('category.show',$category->id)}}">{{$category->name}}</a></li>
+        <li class="btn-success navbar-btn "><a style="color: black;" href="{{route('category.show',$category->id)}}">{{$category->name}}</a></li>
       @empty
         <li>No Category</li>
       @endforelse
