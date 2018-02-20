@@ -24,6 +24,7 @@
 @endsection
 @section('content')
     <h3>OrderS</h3>
+    <hr>
     @foreach ($orders as $order)
 
       <table class="table table-hover bg-success margin">
