@@ -14,9 +14,6 @@
     <div class="small-6 columns">
         <div class="item-wrapper">
             <h3 class="subheader">
-                
-                    {{-- expr --}}
-               
                <span class="price-tag">${{$product->price}}</span> {{$product->name}}
             </h3>
             <div class="row">
